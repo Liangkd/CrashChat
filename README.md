@@ -29,6 +29,15 @@
 </p>
 
 
+## Fine-tuned Checkpoints
+
+The following checkpoints store learnable parameters (positional linear projection layers, and lora) only.
+
+
+
+
+
+
 
 
 
