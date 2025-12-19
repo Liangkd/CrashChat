@@ -17,7 +17,7 @@
 - We also construct an instruction-tuning crash video dataset, encompassing six core tasks and a total of 18,398 videos and 96,262 video-QA pairs, to further enhance CrashChat's performance.
 
 <p align="center" width="100%">
-<a target="_blank"><img src="figs/model_architecture.png" alt="CrashChat" style="width: 80%; min-width: 400px; display: block; margin: auto;"></a>
+<a target="_blank"><img src="figs/model_architecture.png" alt="CrashChat" style="width: 60%; min-width: 400px; display: block; margin: auto;"></a>
 </p>
 
 
