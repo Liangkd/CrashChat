@@ -21,4 +21,28 @@
 </p>
 
 
+## Example Outputs
+- **An illustration of linguistic-centric task and perception-centric task of CrashChat**
+
+<p align="center" width="100%">
+<a target="_blank"><img src="figs/Qualitative_analysis.png" alt="Qualitative_analysis" style="width: 60%; min-width: 400px; display: block; margin: auto;"></a>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
