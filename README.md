@@ -6,6 +6,13 @@
 
 <h5 align="center"> If our project helps you, please give us a star ⭐ on GitHub to support us. 🙏🙏 </h2>
 
+<div style='display:flex; gap: 0.25rem; '>
+<a href='https://arxiv.org/abs/2312.02051'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
+<a href='https://huggingface.co/datasets/KDliang/CrashChat'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a> 
+<a href='https://huggingface.co/KDliang/crashchat'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
+</div>
+
+
 ## 📰 News
 - [25.12.18] ![NEW!](https://img.shields.io/badge/NEW!-red) Release the initial version of **CrashChat**.
 
