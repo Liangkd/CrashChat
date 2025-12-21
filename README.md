@@ -25,7 +25,7 @@
 - We also construct an instruction-tuning crash video dataset, encompassing six core tasks and a total of 18,385 videos and 96,184 video-QA pairs, to further enhance CrashChat's performance.
 
 <p align="center" width="100%">
-<a target="_blank"><img src="figs/model_architecture.png" alt="CrashChat" style="width: 60%; min-width: 400px; display: block; margin: auto;"></a>
+<a target="_blank"><img src="figs/figs/model_architecture_overview.png" alt="CrashChat" style="width: 60%; min-width: 400px; display: block; margin: auto;"></a>
 </p>
 
 
@@ -39,11 +39,13 @@
 
 <details>
   <summary>💡Click here to show detailed performance on current baseline MLLM</summary>
-  <img src="https://github.com/user-attachments/assets/118e7a56-0c3e-4132-b0b5-f516d0654338" style="max-width: 100%; height: auto;">
+  <img src="figs/ComparisonofMLLMsforchoosingthebaselinemodel..png" style="max-width: 100%; height: auto;">
 </details>
 
-
-
+<details>
+  <summary>💡Click here to show detailed performance on coupling and grouping strategy for both linguistic-centric and perception-centric tasks</summary>
+  <img src="figs/ComparisonofMLLMsforchoosingthebaselinemodel..png" style="max-width: 100%; height: auto;">
+</details>
 
 
 
