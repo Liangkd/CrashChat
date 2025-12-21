@@ -55,6 +55,7 @@ The following checkpoints store learnable parameters (positional linear projecti
 
 | Checkpoint | MLLM backbone | Training Strategy - Task | Link |
 |----------|-------------|-------------|--------------|
+| CrashChat-7B-Finetuned | VideoLLaMA-3 7B | VideoLLaMA3 - baseline | [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt/videollama3_baseline) |
 | CrashChat-7B-Finetuned | VideoLLaMA-3 7B | Independent monotask models - crash recognition | [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt/crash_recognition_independent_monotask) |
 | CrashChat-7B-Finetuned | VideoLLaMA-3 7B | Independent monotask models - crash description | [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt/crash_description_independent_monotask) |
 | CrashChat-7B-Finetuned | VideoLLaMA-3 7B | Independent monotask models - causal reasoning | [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt/causal_reasoning_independent_monotask) |
@@ -110,19 +111,22 @@ conda install -c conda-forge ffmpeg -y
 To use our training code, please organize checkpoint as you like under `ckpt`, and then download the corresponding model checkpoint from Model Zoo. For example:
 ```bash
 ckpt
-├── crash_recognition_independent_monotask
+├── videollama3_baseline (required for training)
 │   ├── added_tokens.json
 │   └── ...
-├── crash_description_independent_monotask
+├── crash_recognition_independent_monotask (optional for evaluation)
 │   ├── added_tokens.json
 │   └── ...
-├── causal_reasoning_independent_monotask
-├── prevention_reasoning_independent_monotask
-├── pre_crash_localization_independent_monotask
-├── crash_localization_independent_monotask
-├── linguistic_centric_homogeneous_multitask
-├── perception_centric_homogeneous_multitask
-└── heterogeneous_multitask
+├── crash_description_independent_monotask (optional for evaluation)
+│   ├── added_tokens.json
+│   └── ...
+├── causal_reasoning_independent_monotask (optional for evaluation)
+├── prevention_reasoning_independent_monotask (optional for evaluation)
+├── pre_crash_localization_independent_monotask (optional for evaluation)
+├── crash_localization_independent_monotask (optional for evaluation)
+├── linguistic_centric_homogeneous_multitask (optional for evaluation)
+├── perception_centric_homogeneous_multitask (optional for evaluation)
+└── heterogeneous_multitask (optional for evaluation)
 ```
 
 To use our training code, please organize the video data and annotations files as you like under `data`. For example:
