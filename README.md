@@ -15,7 +15,7 @@
   - (1) a multitask learning approach designed to effectively inject the comprehensive knowledge of crash video analysis into VideoLLaMA3;
   - (2) an MLLM capable of unified crash recognition, temporal grounding, and understanding across diverse scenarios;
   - (3) a comprehensive evaluation that provides the first benchmarking of MLLMs for end-to-end crash video analysis.
-- We also construct an instruction-tuning crash video dataset, encompassing six core tasks and a total of 18,398 videos and 96,262 video-QA pairs, to further enhance CrashChat's performance.
+- We also construct an instruction-tuning crash video dataset, encompassing six core tasks and a total of 18,385 videos and 96,184 video-QA pairs, to further enhance CrashChat's performance.
 
 <p align="center" width="100%">
 <a target="_blank"><img src="figs/model_architecture.png" alt="CrashChat" style="width: 60%; min-width: 400px; display: block; margin: auto;"></a>
@@ -61,8 +61,9 @@ The following checkpoints store learnable parameters (positional linear projecti
 
 **Notes:**
 - Fine-tuned on instruction-tuning data from  
-  - [CrashChat-original](https://huggingface.co/datasets/ShuhuaiRen/TimeIT)
-  - [CrashChat-resized](https://huggingface.co/datasets/ShuhuaiRen/TimeIT/blob/main/data/valley/Valley_instruct_73k.json)  
+  - [CrashChat-original_01](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-original)
+  - [CrashChat-resized_01](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-resized)
+  - [CrashChat-resized_02](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-resized_02)
 
 
 
@@ -87,7 +88,7 @@ Step 3, Install required Python dependencies:
 pip install -r requirements.txt
 ```
 
-Step 4, Install FlashAttention (local wheel):
+Step 4, Install FlashAttention (local wheel). You can download the cooresponding wheel [here](https://huggingface.co/KDliang/crashchat/tree/main/wheels):
 ```
 pip install /CrashChat/flash_attn-2.7.3+cu11torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl --no-deps
 ```
@@ -98,6 +99,37 @@ conda install -c conda-forge ffmpeg -y
 ```
 
 #### Prerequisites 
+
+To use our training code, please organize checkpoint as you like under `ckpt`, and then download the corresponding model checkpoint from Model Zoo. For example:
+```bash
+ckpt
+├── crash_recognition_independent_monotask
+│   ├── added_tokens.json
+│   └── ...
+├── crash_description_independent_monotask
+│   ├── added_tokens.json
+│   └── ...
+├── causal_reasoning_independent_monotask
+├── prevention_reasoning_independent_monotask
+├── pre_crash_localization_independent_monotask
+├── crash_localization_independent_monotask
+├── linguistic_centric_homogeneous_multitask
+├── perception_centric_homogeneous_multitask
+└── heterogeneous_multitask
+```
+
+To use our training code, please organize the video data and annotations files as you like under `data`. For example:
+```bash
+data
+├── videos
+│   ├── cap_1_001537.mp4
+│   ├── cap_1_002004.mp4
+│   └── ...
+├── crashchat_dada_video_total_cause_reasoning_test.json
+├── crashchat_dada_video_total_cause_reasoning_train.json
+├── ...
+└── crashchat_dada_video_total_prevention_reasoning_val.json
+```
 
 
 
