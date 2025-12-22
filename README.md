@@ -203,7 +203,7 @@ If you find CrashChat useful for your research and applications, please cite usi
 We gratefully acknowledge the open-source projects and datasets that inspired and supported this work, including VideoLLaMA3, MM-AU, Nexar, and D²-City. Their contributions to vision-language modeling and real-world traffic understanding have been invaluable.
 
 
+## :earth_americas: Contact
 
-
-
+If you have any question, please feel free to email me (kaidi.liang@stonybrook.edu) or leave a comment under the 'Issues' module. Thank you!
 
