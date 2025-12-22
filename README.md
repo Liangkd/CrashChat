@@ -6,12 +6,13 @@
 
 <h5 align="center"> If our project helps you, please give us a star ⭐ on GitHub to support us. 🙏🙏 </h2>
 
-<div style='display:flex; gap: 0.25rem; '>
-<a href='https://arxiv.org/abs/2312.02051'><img src='https://img.shields.io/badge/Paper-PDF-red'></a>
-<a href='https://huggingface.co/datasets/KDliang/CrashChat'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue'></a> 
-<a href='https://huggingface.co/KDliang/crashchat'><img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoint-blue'></a> 
-</div>
+<h5 align="center">
 
+[![hf_checkpoint](https://img.shields.io/badge/🤗-Checkpoints-9C276A.svg)](https://huggingface.co/KDliang/crashchat)
+[![hf_dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/KDliang/CrashChat)
+[![paper](https://img.shields.io/badge/Paper-PDF-red)]()
+[![arXiv](https://img.shields.io/badge/Arxiv-xxxx.xxxxx-AD1C18.svg?logo=arXiv)]() 
+</h5>
 
 ## 📰 News
 - [25.12.18] ![NEW!](https://img.shields.io/badge/NEW!-red) Release the initial version of **CrashChat**.
@@ -72,6 +73,7 @@ The following checkpoints store learnable parameters (positional linear projecti
 **Notes:**
 - Fine-tuned on instruction-tuning data from  
   - [CrashChat-original_01](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-original)
+  - [CrashChat-original_02](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-original)
   - [CrashChat-resized_01](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-resized)
   - [CrashChat-resized_02](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-resized_02)
 
@@ -81,29 +83,35 @@ The following checkpoints store learnable parameters (positional linear projecti
 
 #### Enviroment Preparation 
 
-Step 1: Create and activate a Conda environment:
+Step 1: Clone repository:
+```
+git clone git@github.com:Liangkd/CrashChat.git
+cd CrashChat
+```
+
+Step 2: Create and activate a Conda environment:
 ```
 conda create -n crashchat python=3.10 -y
 conda activate crashchat
 ```
 
-Step 2, Upgrade pip and install PyTorch (CUDA 11.8):
+Step 3, Upgrade pip and install PyTorch (CUDA 11.8):
 ```
 pip install --upgrade pip
 pip install torch==2.4.0 torchvision==0.19.0 --extra-index-url https://download.pytorch.org/whl/cu118
 ```
 
-Step 3, Install required Python dependencies:
+Step 4, Install required Python dependencies:
 ```
 pip install -r requirements.txt
 ```
 
-Step 4, Install FlashAttention (local wheel). You can download the cooresponding wheel [here](https://huggingface.co/KDliang/crashchat/tree/main/wheels):
+Step 5, Install FlashAttention (local wheel). You can download the cooresponding wheel [here](https://huggingface.co/KDliang/crashchat/tree/main/wheels):
 ```
 pip install /CrashChat/flash_attn-2.7.3+cu11torch2.4cxx11abiFALSE-cp310-cp310-linux_x86_64.whl --no-deps
 ```
 
-Step 5, Install FFmpeg:
+Step 6, Install FFmpeg:
 ```
 conda install -c conda-forge ffmpeg -y
 ```
@@ -147,10 +155,51 @@ data
 
 ## 🗝️ Training
 
+#### Step 1: Prepare dataset and checkpoint
+Download the database and model weights from Hugging Face; the file organization is as described above.
 
+#### Step 2: Start training
+Different shell scripts are used to train models for different tasks. Taking `Independent_monotask_models_causal_reasoning.sh` as an example, the training methods for single-GPU and multi-GPU setups are as follows:
+```bash
+# single GPU
+CUDA_VISIBLE_DEVICES=0 bash /CrashChat/scripts/train/Independent_monotask_models_causal_reasoning.sh 1
+# multiple GPUs
+CUDA_VISIBLE_DEVICES=1,2 bash /CrashChat/scripts/train/Independent_monotask_models_causal_reasoning.sh 2
+```
 
+## ✅ Evaluation
 
+#### Step 1: Prepare evaluation data
+Convert the trained weights into weights usable by the model, as shown below. If needed, the [videollama3_original_model](https://huggingface.co/KDliang/crashchat/tree/main/videollama3_original_model) can be downloaded from Hugging Face.
+```bash
+python CrashChat/tool/merge_and_convert_videollama3_lora.py
+```
 
+#### Step 2: Evaluate the test dataset
+Get the evaluation JSON file:
+```bash
+# single GPU
+CUDA_VISIBLE_DEVICES=0 bash scripts/eval/eval_video_causal_reasoning.sh
+# multiple GPUs
+CUDA_VISIBLE_DEVICES=0,1 bash /CrashChat/scripts/train/Independent_monotask_models_causal_reasoning.sh 2
+```
+
+#### Step 3: Metric Performance
+```bash
+python CrashChat/scripts/eval/compute_causal_reasoning_metrics.py
+```
+
+## 📑 Citation
+
+If you find CrashChat useful for your research and applications, please cite using this BibTeX:
+
+```bibtex
+
+```
+
+## 👍 Acknowledgement
+
+We gratefully acknowledge the open-source projects and datasets that inspired and supported this work, including VideoLLaMA3, MM-AU, Nexar, and D²-City. Their contributions to vision-language modeling and real-world traffic understanding have been invaluable.
 
 
 
