@@ -46,7 +46,7 @@
 
 <details>
   <summary>💡Click here to show detailed performance on coupling and grouping strategy for both linguistic-centric and perception-centric tasks</summary>
-  <img src="figs/ComparisonofMLLMsforchoosingthebaselinemodel..png" style="max-width: 100%; height: auto;">
+  <img src="figs/EvaluationofCrashChat’staskdecouplingandgroupingstrategyforboth linguistic-centricandperception-centric tasks.png" style="max-width: 100%; height: auto;">
 </details>
 
 
