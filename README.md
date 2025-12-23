@@ -15,7 +15,7 @@
 </h5>
 
 ## 📰 News
-- [25.12.21] ![NEW!](https://img.shields.io/badge/NEW!-red) The [paper](https://arxiv.org/abs/2512.18878) has been published on the arvix. 🎉🎉🎉
+- [25.12.22] ![NEW!](https://img.shields.io/badge/NEW!-red) The [paper](https://arxiv.org/abs/2512.18878) has been published on the arvix. 🎉🎉🎉
 - [25.12.21] ![NEW!](https://img.shields.io/badge/NEW!-red) Release the [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt) and [Datasets](https://huggingface.co/datasets/KDliang/CrashChat/tree/main) of **CrashChat**.
 - [25.12.18] Release the initial version of **CrashChat**.
 
