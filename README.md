@@ -10,13 +10,14 @@
 
 [![hf_checkpoint](https://img.shields.io/badge/🤗-Checkpoints-9C276A.svg)](https://huggingface.co/KDliang/crashchat)
 [![hf_dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-blue)](https://huggingface.co/datasets/KDliang/CrashChat)
-[![paper](https://img.shields.io/badge/Paper-PDF-red)]()
-[![arXiv](https://img.shields.io/badge/Arxiv-xxxx.xxxxx-AD1C18.svg?logo=arXiv)]() 
+[![paper](https://img.shields.io/badge/Paper-PDF-red)](https://arxiv.org/pdf/2512.18878)
+[![arXiv](https://img.shields.io/badge/Arxiv-2512.18878-AD1C18.svg?logo=arXiv)](https://arxiv.org/abs/2512.18878) 
 </h5>
 
 ## 📰 News
+- [25.12.21] ![NEW!](https://img.shields.io/badge/NEW!-red) The [paper](https://arxiv.org/abs/2512.18878) has been published on the arvix. 🎉🎉🎉
 - [25.12.21] ![NEW!](https://img.shields.io/badge/NEW!-red) Release the [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt) and [Datasets](https://huggingface.co/datasets/KDliang/CrashChat/tree/main) of **CrashChat**.
-- [25.12.18] ![NEW!](https://img.shields.io/badge/NEW!-red) Release the initial version of **CrashChat**.
+- [25.12.18] Release the initial version of **CrashChat**.
 
 
 ## 🌟 Introduction
@@ -195,7 +196,16 @@ python CrashChat/scripts/eval/compute_causal_reasoning_metrics.py
 If you find CrashChat useful for your research and applications, please cite using this BibTeX:
 
 ```bibtex
-
+@article{liang2025crashchat,
+  title   = {CrashChat: A Multimodal Large Language Model for Multitask Traffic Crash Video Analysis},
+  author  = {Liang, Kaidi and Li, Ke and Hu, Xianbiao and Qin, Ruwen},
+  journal = {arXiv preprint arXiv:2512.18878},
+  year    = {2025},
+  archivePrefix = {arXiv},
+  eprint  = {2512.18878},
+  primaryClass = {cs.CV},
+  url     = {https://arxiv.org/abs/2512.18878}
+}
 ```
 
 ## 👍 Acknowledgement
