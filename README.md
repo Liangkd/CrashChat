@@ -75,7 +75,7 @@ The following checkpoints store learnable parameters (positional linear projecti
 **Notes:**
 - Fine-tuned on instruction-tuning data from  
   - [CrashChat-original_01](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-original)
-  - [CrashChat-original_02](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-original)
+  - [CrashChat-original_02](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-original_02)
   - [CrashChat-resized_01](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-resized)
   - [CrashChat-resized_02](https://huggingface.co/datasets/KDliang/CrashChat/tree/main/CrashChat-resized_02)
 
