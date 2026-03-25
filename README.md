@@ -183,7 +183,7 @@ Get the evaluation JSON file:
 # single GPU
 CUDA_VISIBLE_DEVICES=0 bash scripts/eval/eval_video_causal_reasoning.sh
 # multiple GPUs
-CUDA_VISIBLE_DEVICES=0,1 bash /CrashChat/scripts/train/Independent_monotask_models_causal_reasoning.sh 2
+CUDA_VISIBLE_DEVICES=0,1 bash scripts/eval/eval_video_causal_reasoning.sh 2
 ```
 
 #### Step 3: Metric Performance
