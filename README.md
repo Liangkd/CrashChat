@@ -2,7 +2,7 @@
 
 <h2 align="center"> <a href="">CrashChat: A Multimodal Large Language Model for Multitask Traffic Crash Video Analysis</a></h2>
 
-<h4 align="center"> <a href="https://liangkd.github.io/">Kaidi Liang</a>, <a href="">Ke Li</a>, <a href="">Xianbiao Hu</a>, <a href="">Ruwen Qin*</a></h4>
+<h4 align="center"> <a href="https://liangkd.github.io/">Kaidi Liang</a>, <a href="">Ke Li</a>, <a href="https://kelisbu.github.io/">Xianbiao Hu</a>, <a href="">Ruwen Qin*</a></h4>
 
 <h5 align="center"> If our project helps you, please give us a star ⭐ on GitHub to support us. 🙏🙏 </h2>
 
@@ -15,8 +15,9 @@
 </h5>
 
 ## 📰 News
-- [25.12.22] ![NEW!](https://img.shields.io/badge/NEW!-red) The [paper](https://arxiv.org/abs/2512.18878) has been published on the arvix. 🎉🎉🎉
-- [25.12.21] ![NEW!](https://img.shields.io/badge/NEW!-red) Release the [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt) and [Datasets](https://huggingface.co/datasets/KDliang/CrashChat/tree/main) of **CrashChat**.
+- [26.04.10] ![NEW!](https://img.shields.io/badge/NEW!-red) Our paper has been accecpted by ICPR 2026. 🎉🎉🎉
+- [25.12.22] ![NEW!](https://img.shields.io/badge/NEW!-red) The [paper](https://arxiv.org/abs/2512.18878) has been published on the arvix.
+- [25.12.21] Release the [Weights](https://huggingface.co/KDliang/crashchat/tree/main/ckpt) and [Datasets](https://huggingface.co/datasets/KDliang/CrashChat/tree/main) of **CrashChat**.
 - [25.12.18] Release the initial version of **CrashChat**.
 
 
